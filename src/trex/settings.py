@@ -25,7 +25,7 @@ SECRET_KEY = '!5e#(k420ll^c)4)788p3-rv29$qs-c#5iqn&je0*1!#jfp5s&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['trex-dev.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['trex-dev.us-west-1.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
