@@ -33,6 +33,16 @@
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <div class="contentContainer">
                 <span>Welcome to T-Recs</span>
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ email_form.as_p }}
+                    <button type="submit">Submit</button>
+                </form>
+                <ul>
+                {% for email in emails %}
+                    <li>{{ email.user_email }}</li>
+                {% endfor %}
+                </ul>
             </div>
         </div>
     </body>
