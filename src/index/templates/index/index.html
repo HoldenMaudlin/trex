@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Holden Maudlin</title>
+        <title>TvRex</title>
         <meta name="author" content="Holden Maudlin, Nick Pietrow">
         <meta name="description" content="T-Recs Landing page">
         <meta name="keyword" content="Fill in">
@@ -14,7 +14,7 @@
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         {% load static %}
         <link rel="stylesheet" type="text/css" media="screen" href="{% static 'index/main.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'media/favicon.png'%}">
         <script src="main.js"></script>
         <!-- Icons 
@@ -28,21 +28,26 @@
     <!-- Start of Main Page
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <body>
-        <div class="container">
+
+        <div class="pageBackground">
             <!-- Title
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
             <div class="contentContainer">
-                <span>Welcome to T-Recs</span>
-                <form role="form" action="" method="post">
-                    {% csrf_token %}
-                    {{ email_form.as_p }}
-                    <button type="submit">Submit</button>
-                </form>
-                <ul>
-                {% for email in emails %}
-                    <li>{{ email.user_email }}</li>
-                {% endfor %}
-                </ul>
+                <div class="headContainer">
+                    <h1 class="headText">Curated Monthly Watchlists</h1>
+                    <h1 class="headText">No algorithms & No bias</h1>
+                </div>
+
+                <div class="formContainer">
+                    <form autocomplete="off" id="inputForm" role="form" action="" method="post">
+                        {% csrf_token %}
+                        {{ email_form.as_p }}
+                        <button class="button" type="submit"><span>Sign Up</span></button>
+                    </form>
+                </div>
+                <div>
+                    <h2>TvRex is delivered to your inbox monthly. We give you unique streaming recommendations to reduce the amount of time it takes to pick the next thing to watch.                         </h2>
+                </div>
             </div>
         </div>
     </body>

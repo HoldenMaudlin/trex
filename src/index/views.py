@@ -16,7 +16,7 @@ def index(request):
             email_object.save()
             return redirect('/')
     else:
-        email_class = EmailForm()
+        email_class = EmailForm(auto_id=False)
     template = 'index/index.html'
     emails = Emails.objects.all()
     context = {
