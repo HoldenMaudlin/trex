@@ -36,7 +36,8 @@ body {
 }
 
 .headContainer {
-    margin-top: 5%;
+    margin-top: 20%;
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./banner.jpeg');
 }
 
 .headText {
@@ -46,10 +47,17 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin: 0px;
 }
 
 h2 {
+    font-size: 44pt;
+    margin: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+h3 {
     font-weight: 300;
     margin-left: 10%;
     margin-right: 10%;
