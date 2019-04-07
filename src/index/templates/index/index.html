@@ -12,8 +12,8 @@
         <title>Hello, world!</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-            <img src="{% static 'index/logo.jpeg' %}" style="width: 64px; height: 64px"></img>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000066" id="navbar">
+            <a href="#"><img src="{% static 'index/assets/logo.jpeg' %}" style="width: 64px; height: 64px; border-radius: 5px;"></img></a>
             <a class="navbar-brand" id="siteName" href="#">TvRex</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,18 +27,34 @@
         </nav>
         <div class="wrapper">
             <div class="column">
-                <div class="jumbotron" id="hero">
-                    <h1 class="display-4">Monthly curated watchlists.</h1>
-                    <h1 class="display-4">No algorithms, no bias.</h1>
-                    <hr class="my-4">
-                    <p style="font-size: 12pt">TvRex is delivered to your inbox monthly. We give you unique streaming recommendations to reduce the amount of time it takes to pick the next thing to watch.</p>
-                    <div class="inputContainer">
-                        <form autocomplete="off" id="inputForm" role="form" action="" method="post">
-                            {% csrf_token %}
-                            {{ email_form.as_p }}
-                            <button class="button" type="submit"><span>Sign Up</span></button>
-                        </form>
-                    </div>               
+                <div class="landing"> 
+                    <div class="jumbotron" id="hero-left">
+                        <h1 id="main-text" class="display-4">Monthly curated watchlists.</h1>
+                        <h1 id="main-text" class="display-4">No algorithms, <span>no bias</span>.</h1>
+                        <hr class="my-4">
+                        <p style="font-size: 12pt">TvRex is delivered to your inbox monthly. We give you unique streaming recommendations to reduce the amount of time it takes to pick the next thing to watch.</p>
+                        <div class="inputContainer">
+                            <form autocomplete="off" id="inputForm" role="form" action="" method="post">
+                                {% csrf_token %}
+                                {{ email_form.as_p }}
+                                <button class="button" type="submit"><span>Sign Up</span></button>
+                            </form>
+                        </div>               
+                    </div>        
+                    <div class="jumbotron" id="hero-right">
+                        <div class="right-top">
+                            <img id="typing" src="{% static 'index/assets/typing.svg' %}"></img>
+                            <h2 id="step" class="display-4">Enter your email</h2>
+                        </div>
+                        <hr class="my-4">   
+                        <div class="right-bottom">
+                            <img id="typing" src="{% static 'index/assets/message.svg' %}"></img>
+                            <h2 id="step" class="display-4">Receive the best Rex monthly</h2>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="display-4" style="font-size: 26pt; text-align: center; margin-top: 50px;">Your favorite watchlists are <span>coming soon</span>!</h1>
                 </div>
             </div>
         </div>
